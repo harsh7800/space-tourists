@@ -1,0 +1,502 @@
+@import url(/home.scss);
+/*----------Media queries for phone----------*/
+@media (max-width: 600px) {
+  body {
+    font-family: "Work Sans", sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(/assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-container .logo img {
+    min-width: 8vw;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+  .navbar-container hr {
+    display: none;
+  }
+  .navbar-container #menubtn {
+    display: block;
+    min-width: 5vw;
+    height: 3.5vh;
+    border: none;
+    background: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 90vw;
+    top: 3vh;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  .navbar-container #menubtn[aria-expanded="true"] {
+    background: url(/assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    z-index: 9999;
+  }
+  .navbar-container .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.066);
+    z-index: 1000;
+    left: 100vw;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    -webkit-transition: left ease-in-out 0.5s;
+    transition: left ease-in-out 0.5s;
+  }
+  .navbar-container .navbar .active {
+    font-size: 1.8rem;
+  }
+  .navbar-container .navbar[data-visible="true"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.066);
+    z-index: 1000;
+    left: 30vw;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    -webkit-transition: left ease-in-out 0.5s;
+    transition: left ease-in-out 0.5s;
+  }
+  .navbar-container .navbar a {
+    text-decoration: none;
+    color: white;
+    margin-top: 15vh;
+    margin-left: 10vw;
+    font-size: 1.4rem;
+  }
+  .navbar-container .navbar a:hover {
+    opacity: 50%;
+  }
+  .navbar-container .navbar a span {
+    margin-right: 2vw;
+  }
+  .main-content h1 {
+    text-align: center;
+    color: white;
+  }
+  .main-content h1 span {
+    color: grey;
+    margin-right: 2vw;
+  }
+  .main-content .content-wrapper .image {
+    width: 100vw;
+    height: 30vh;
+    background-color: white;
+    background: url(/assets/technology/image-spaceport-landscape.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: -5vw;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn .active {
+    background-color: white;
+    color: black;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a {
+    min-width: 8vw;
+    text-align: center;
+    height: 4vh;
+    padding: 1.5vw;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    margin-left: 5vh;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a:hover {
+    background-color: white;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a span {
+    margin-left: .3vw;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a span:hover {
+    color: black;
+  }
+  .main-content .content-wrapper .image-info .info {
+    text-align: center;
+  }
+  .main-content .content-wrapper .image-info .info h3 {
+    color: grey;
+    margin-top: 5vh;
+  }
+  .main-content .content-wrapper .image-info .info h1 {
+    font-size: 3rem;
+    color: white;
+    margin-top: 0vh;
+  }
+  .main-content .content-wrapper .image-info .info p {
+    color: white;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  /*----------Media queries for tablet----------*/
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(/assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    font-family: "Work Sans", sans-serif;
+  }
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-container .logo img {
+    min-width: 4vw;
+    height: 6vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+  .navbar-container hr {
+    display: none;
+  }
+  .navbar-container #menubtn {
+    display: none;
+  }
+  .navbar-container .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 55vw;
+    height: 7vh;
+    background-color: rgba(128, 128, 128, 0.119);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    position: relative;
+    text-align: center;
+    top: 0vh;
+    padding-top: 3vh;
+  }
+  .navbar-container .navbar .active {
+    border-bottom: 2px solid white;
+  }
+  .navbar-container .navbar a {
+    color: rgba(255, 255, 255, 0.825);
+    width: auto;
+    padding-top: 3vh;
+    height: 7vh;
+    text-decoration: none;
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-top: -3vh;
+    margin-right: 3vw;
+  }
+  .navbar-container .navbar a:hover {
+    opacity: 50%;
+  }
+  .navbar-container .navbar a:focus {
+    border-bottom: 2px solid white;
+  }
+  .navbar-container .navbar a span {
+    display: none;
+  }
+  .main-content h1 {
+    color: white;
+    margin-left: 5vw;
+  }
+  .main-content h1 span {
+    color: grey;
+    margin-right: 2vw;
+  }
+  .main-content .content-wrapper .image {
+    width: 100vw;
+    height: 30vh;
+    background-color: white;
+    background: url(/assets/technology/image-spaceport-landscape.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main-content .content-wrapper .image-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5vh;
+    margin-left: -5vw;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn .active {
+    background-color: white;
+    color: black;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a {
+    min-width: 4vw;
+    height: 4vh;
+    padding: 1.5vw;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    margin-left: 5vh;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a:hover {
+    background-color: white;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a span {
+    margin-left: .9vw;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a span:hover {
+    color: black;
+  }
+  .main-content .content-wrapper .image-info .info {
+    text-align: center;
+  }
+  .main-content .content-wrapper .image-info .info h3 {
+    color: grey;
+    margin-left: -3vw;
+    margin-top: 5vh;
+  }
+  .main-content .content-wrapper .image-info .info h1 {
+    color: white;
+    font-size: 3rem;
+    margin-left: -3vw;
+    margin-top: -2vh;
+  }
+  .main-content .content-wrapper .image-info .info p {
+    color: white;
+    width: 60vw;
+    margin-top: -2vh;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+  body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vw;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(/assets/technology/background-technology-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Work Sans", sans-serif;
+  }
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-container .logo img {
+    min-width: 3vw;
+    margin-left: 3vw;
+    margin-top: 7vh;
+  }
+  .navbar-container hr {
+    display: block;
+    width: 30vw;
+    position: absolute;
+    left: 11vw;
+    top: 9vh;
+    z-index: 9999;
+  }
+  .navbar-container #menubtn {
+    display: none;
+  }
+  .navbar-container .navbar {
+    width: 60vw;
+    height: 7vh;
+    background-color: rgba(128, 128, 128, 0.119);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    position: relative;
+    text-align: center;
+    top: 5vh;
+    padding-top: 3vh;
+  }
+  .navbar-container .navbar a {
+    color: rgba(255, 255, 255, 0.825);
+    width: auto;
+    padding-top: 3vh;
+    height: 10vh;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 3vw;
+    margin-top: 3vh;
+  }
+  .navbar-container .navbar a:hover {
+    opacity: 50%;
+  }
+  .navbar-container .navbar a:focus {
+    border-bottom: 2px solid white;
+  }
+  .navbar-container .navbar a span {
+    margin-right: 15px;
+  }
+  .main-content h1 {
+    position: relative;
+    left: 10vw;
+    top: 5vh;
+    color: white;
+  }
+  .main-content h1 span {
+    color: grey;
+    margin-right: 2vw;
+  }
+  .main-content .content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 5vh;
+  }
+  .main-content .content-wrapper .image {
+    min-width: 30vw;
+    height: 60vh;
+    background-color: white;
+    background: url(/assets/technology/image-spaceport-portrait.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main-content .content-wrapper .image-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 10vh;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 5vw;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn .active {
+    background-color: white;
+    color: black;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a {
+    min-width: 2vw;
+    height: 4vh;
+    padding: 1.5vw;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5vh;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a:hover {
+    background-color: white;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a span {
+    margin-left: .5vw;
+  }
+  .main-content .content-wrapper .image-info .tech-navbtn a span:hover {
+    color: black;
+  }
+  .main-content .content-wrapper .image-info .info {
+    width: 40vw;
+    text-align: left;
+    margin-left: 10vw;
+  }
+  .main-content .content-wrapper .image-info .info h3 {
+    color: gray;
+  }
+  .main-content .content-wrapper .image-info .info h1 {
+    margin-top: -5vh;
+    font-size: 3rem;
+    margin-left: -10vw;
+  }
+  .main-content .content-wrapper .image-info .info p {
+    color: white;
+    width: 30vw;
+    margin-top: 10vh;
+  }
+}
+/*# sourceMappingURL=spaceport.css.map */

@@ -1,0 +1,454 @@
+@import url(/home.scss);
+
+$font: 'Work Sans',
+sans-serif;
+$color: white;
+
+@mixin button {
+      border: none;
+      background: none;
+}
+
+@mixin flexbox {
+      display: flex;
+      justify-content: space-between;
+}
+
+/*----------Media queries for phone----------*/
+@media (max-width: 600px) {
+
+      body {
+            font-family: $font;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url(/assets/crew/background-crew-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+      }
+
+      .navbar-container {
+            display: flex;
+            justify-content: space-between;
+
+            .logo img {
+                  min-width: 8vw;
+                  height: 5vh;
+                  margin-top: 2vh;
+                  margin-left: 5vw;
+            }
+
+            hr {
+                  display: none;
+            }
+
+            #menubtn {
+                  display: block;
+                  min-width: 5vw;
+                  height: 3.5vh;
+                  border: none;
+                  background: url(/assets/shared/icon-hamburger.svg);
+                  background-repeat: no-repeat;
+                  position: absolute;
+                  left: 90vw;
+                  top: 3vh;
+                  z-index: 9999;
+                  cursor: pointer;
+            }
+
+            #menubtn[aria-expanded="true"] {
+                  background: url(/assets/shared/icon-close.svg);
+                  background-repeat: no-repeat;
+                  z-index: 9999;
+            }
+
+            .navbar {
+                  display: flex;
+                  flex-direction: column;
+                  position: absolute;
+                  width: 70vw;
+                  height: 100vh;
+                  background-color: rgba(255, 255, 255, 0.066);
+                  z-index: 1000;
+                  left: 100vw;
+                  backdrop-filter: blur(5px);
+                  transition: left ease-in-out 0.5s;
+            }
+
+            .navbar[data-visible="true"] {
+                  display: flex;
+                  flex-direction: column;
+                  position: absolute;
+                  width: 70vw;
+                  height: 100vh;
+                  background-color: rgba(255, 255, 255, 0.066);
+                  z-index: 1000;
+                  left: 30vw;
+                  backdrop-filter: blur(3px);
+                  transition: left ease-in-out 0.5s;
+            }
+
+            .navbar a {
+                  text-decoration: none;
+                  color: white;
+                  margin-top: 5vh;
+                  margin-left: 10vw;
+                  font-size: 1.4rem;
+                  .active{
+                        font-size: 1.8rem;
+                  }
+                  &:hover {
+                        opacity: 50%;
+                  }
+
+                  span {
+                        margin-right: 2vw;
+                  }
+            }
+      }
+
+
+
+      
+.main-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1{
+            font-size: 1.2rem;
+            text-align: center;
+            color: white;
+            margin-left: 5vw;
+            margin-top: 5vh;
+            span{
+                  color: grey;
+                  margin-right: 2vw;
+            }
+      }
+      .crew-carousel{
+            display: flex;
+            flex-direction: column;
+            img{
+                  position: relative;
+                  left: 30vw;
+                  top: 2vh;
+                  width: 50vw;
+                  height: 40vh;
+            }
+            hr{
+                  width: auto;
+                  color: white;
+            }
+            .nav-carousel{
+                 position: relative;
+                 left: 40vw;
+                 a{
+                      text-decoration: none; 
+                      margin-left: 2vw;
+                      cursor: pointer;
+                 }
+            }
+      }
+      .crew-info{
+            margin-top: 5vh;
+            h3{
+                  color: white;
+                  text-align: center;
+            }
+            h2{
+                  color: white;
+                  text-align: center;
+                  font-size: 3rem;
+            }
+            p{
+                  color: white;
+                  text-align: center;
+            }
+      }
+
+}
+}
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+
+      /*----------Media queries for tablet----------*/
+      body {
+            // overflow: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url(/assets/crew/background-crew-tablet.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            font-family: $font
+      }
+.navbar-container {
+      @include flexbox();
+
+      .logo img {
+            min-width: 4vw;
+            height: 6vh;
+            margin-top: 2vh;
+            margin-left: 5vw;
+      }
+
+      hr {
+            display: none;
+      }
+
+      #menubtn {
+            display: none;
+      }
+
+      .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 55vw;
+            height: 10vh;
+            background-color:rgba(128, 128, 128, 0.119);
+            backdrop-filter: blur(5px);
+            position: relative;
+            text-align: center;
+            top: 0vh;
+            padding-top: 3vh;
+              .active{
+        border-bottom: 2px solid white;
+      }
+
+            a {
+                  color: rgba(255, 255, 255, 0.825);
+                  width: auto;
+                  // padding-top: 3vh;
+                  height: 7vh;
+                  text-decoration: none;
+                  font-size: 2vw;
+                  margin-left: 3vw;
+                  margin-top: 0vh;
+                  margin-right: 3vw;
+
+                  &:hover {
+                        opacity: 50%;
+                  }
+
+                  &:focus {
+                        border-bottom: 2px solid white;
+                  }
+
+                  span {
+                        display: none;
+                  }
+            }
+      }
+}
+
+.main-content{
+      overflow: hidden;
+      h1{
+            font-size: 2.5vw;
+            color: white;
+            margin-left: 5vw;
+            margin-top: 5vh;
+            span{
+                  color: grey;
+                  margin-right: 2vw;
+            }
+      }
+
+      .carousel-info-container{
+            display: flex;
+            flex-direction: column-reverse;
+            .crew-carousel{
+                  display: flex;
+                  flex-direction: column-reverse;
+      
+                  img{
+                        position: relative;
+                        left: 30vw;
+                        top: 5vh;
+                        // min-width: 20vw;
+                        width: 40vw;
+                        height: 55vh;
+                  }
+                  hr{
+                        display: none;
+                  }
+                  .nav-carousel{
+                       position: relative;
+                       left: 40vw;
+                       a{
+                           text-decoration: none;  
+                           margin-left: 2vw;
+                           cursor: pointer;
+                       }
+                  }
+            }
+            .crew-info{
+                  margin-top: 5vh;
+                  h3{
+                        color: white;
+                        text-align: center;
+                  }
+                  h2{
+                        color: white;
+                        text-align: center;
+                        font-size: 3rem;
+                  }
+                  p{
+                        color: white;
+                        position: relative;
+                        left: 22vw;
+                        max-width: 55vw;
+                        text-align: center;
+                  }
+            }
+      }
+}
+}
+
+
+/*----------Media queries for desktop----------*/
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+
+      body {
+           overflow: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url(/assets/crew/background-crew-desktop.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            // background-position: center;
+            font-family: $font
+      }
+ .navbar-container {
+            @include flexbox();
+
+            .logo img {
+                  min-width: 3vw;
+                  margin-left: 3vw;
+                  margin-top: 7vh;
+            }
+
+            hr {
+                  display: block;
+                  width: 30vw;
+                  position: absolute;
+                  left: 11vw;
+                  top: 8vh;
+                  z-index: 9999;
+                  color: rgb(255, 255, 255);
+            }
+
+            #menubtn {
+                  display: none;
+            }
+
+            .navbar {
+                  display: flex;
+                  justify-content: space-evenly;
+                  width: 60vw;
+                  height: 10vh;
+                  background-color: rgba(128, 128, 128, 0.119);
+                  backdrop-filter: blur(5px);
+                  position: relative;
+                  top: 5vh;
+                  text-align: center;
+                  
+                  a {
+                        color: rgba(255, 255, 255, 0.825);
+                        width: auto;
+                        height: 10vh;
+                        text-decoration: none;
+                        font-size: 1.3rem;
+                        margin-left: -2vw;
+                        margin-top: 2vh;
+
+                        &:hover {
+                              opacity: 50%;
+                        }
+
+                        &:focus {
+                              border-bottom: 2px solid white;
+                        }
+
+                        span {
+                              margin-right: 15px;
+                        }
+                  }
+            }
+      }
+
+      .main-content{
+            overflow: hidden;
+            h2{
+                  margin-top: 10vh;
+                  margin-left: 10vw;
+                  color: white;
+                  span{
+                        color: grey;
+                        margin-right: 2vw;
+                  }
+            }
+            .carousel-info-container{
+                  display: flex;
+                  flex-direction: row-reverse;
+                  .crew-carousel{
+                        margin-top: -5vh;
+                        margin-right: 10vw;
+                        img{
+                        width: 30vw;
+                        height: 75vh;
+                        }
+                        hr{
+                              display: none;
+                        }
+                  }
+                  .nav-carousel{
+                        position: absolute;
+                        left: 10vw;
+                        top: 80vh;
+                        a{
+                              margin-right: 2vw;
+                              text-decoration: none;
+                              cursor: pointer;
+                        }
+                  }
+                  .crew-info{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        color: white;
+                        position: absolute;
+                        left: 10vw;
+                        h3{
+                              color: grey;
+                              text-align: left;
+                              position: relative;
+                              top: 10vh;
+                        }
+                        h2{
+                              text-align: center;
+                              position: relative;
+                              font-size: 3.5rem;
+                              left: -10vw;
+                        }
+
+                        p{
+                              text-align: left;
+                              width: 30vw;
+                              margin-top: 5vh;
+                        }
+                  }
+            }
+      }
+}

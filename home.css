@@ -1,0 +1,426 @@
+html {
+  font-family: "Work Sans", sans-serif;
+}
+
+@media (max-width: 600px) {
+  /*----------Media queries for phone----------*/
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(assets/home/mobile-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Work Sans", sans-serif;
+  }
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-container .logo img {
+    min-width: 8vw;
+    height: 5vh;
+    margin-top: 4vh;
+    margin-left: 5vw;
+  }
+  .navbar-container hr {
+    display: none;
+  }
+  .navbar-container #menubtn {
+    display: block;
+    min-width: 5vw;
+    height: 3.5vh;
+    border: none;
+    background: url(/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 90vw;
+    top: 5vh;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  .navbar-container #menubtn[aria-expanded="true"] {
+    background: url(/assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    z-index: 9999;
+  }
+  .navbar-container .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.066);
+    z-index: 1000;
+    left: 100vw;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    -webkit-transition: left ease-in-out 0.5s;
+    transition: left ease-in-out 0.5s;
+  }
+  .navbar-container .navbar[data-visible="true"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.066);
+    z-index: 1000;
+    left: 30vw;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    -webkit-transition: left ease-in-out 0.5s;
+    transition: left ease-in-out 0.5s;
+  }
+  .navbar-container .navbar a {
+    width: 20vw;
+    text-decoration: none;
+    color: white;
+    margin-top: 15vh;
+    margin-left: 10vw;
+    font-size: 1.4rem;
+  }
+  .navbar-container .navbar a .active {
+    font-size: 1.8rem;
+  }
+  .navbar-container .navbar a:hover {
+    opacity: 50%;
+  }
+  .navbar-container .navbar a span {
+    margin-right: 2vw;
+  }
+  .main-content {
+    margin-top: 15vh;
+  }
+  .main-content .title-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .main-content .title-container h3 {
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Work Sans", sans-serif;
+  }
+  .main-content .title-container h1 {
+    color: white;
+    font-size: 4.5rem;
+    margin-top: 0vh;
+  }
+  .main-content .title-container p {
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    margin-top: 0vh;
+  }
+  .main-content .explore-container button {
+    border: none;
+    background: none;
+    min-width: 30vw;
+    height: 20vh;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    background-color: white;
+    position: relative;
+    left: 35%;
+    margin-top: 5vh;
+  }
+  .main-content .explore-container button:hover {
+    opacity: 60%;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  /*----------Media queries for tablet----------*/
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(assets/home/tablet-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    font-family: "Work Sans", sans-serif;
+    height: 100vh;
+  }
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-container .logo img {
+    min-width: 4vw;
+    height: 6vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+  }
+  .navbar-container hr {
+    display: none;
+  }
+  .navbar-container #menubtn {
+    display: none;
+  }
+  .navbar-container .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 55vw;
+    height: 7vh;
+    background-color: rgba(128, 128, 128, 0.119);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    position: relative;
+    text-align: center;
+    top: 0vh;
+    padding-top: 3vh;
+  }
+  .navbar-container .navbar .active {
+    border-bottom: 2px solid white;
+  }
+  .navbar-container .navbar a {
+    color: rgba(255, 255, 255, 0.825);
+    width: auto;
+    padding-top: 3vh;
+    height: 7vh;
+    text-decoration: none;
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-top: -3vh;
+    margin-right: 3vw;
+  }
+  .navbar-container .navbar a:hover {
+    opacity: 50%;
+  }
+  .navbar-container .navbar a:focus {
+    border-bottom: 2px solid white;
+  }
+  .navbar-container .navbar a span {
+    display: none;
+  }
+  .main-content {
+    margin-top: 10vh;
+  }
+  .main-content .title-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .main-content .title-container h3 {
+    color: white;
+    font-size: 2rem;
+    font-family: "Work Sans", sans-serif;
+  }
+  .main-content .title-container h1 {
+    color: white;
+    font-size: 6rem;
+    margin-top: -3vh;
+  }
+  .main-content .title-container p {
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    margin-top: -7vh;
+    margin-left: 23vw;
+    max-width: 55vw;
+  }
+  .main-content .explore-container button {
+    border: none;
+    background: none;
+    min-width: 20vw;
+    height: 25vh;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    background-color: white;
+    position: relative;
+    left: 40%;
+    margin-top: 5vh;
+  }
+  .main-content .explore-container button:hover {
+    opacity: 60%;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+  /*----------Media queries for desktop----------*/
+  body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(assets/home/desktop-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Work Sans", sans-serif;
+  }
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-container .logo img {
+    min-width: 3vw;
+    margin-left: 3vw;
+    margin-top: 7vh;
+  }
+  .navbar-container hr {
+    display: block;
+    width: 30vw;
+    position: absolute;
+    left: 11vw;
+    top: 9vh;
+    z-index: 9999;
+  }
+  .navbar-container #menubtn {
+    display: none;
+  }
+  .navbar-container .navbar {
+    width: 60vw;
+    display: inline-block;
+    height: 10vh;
+    background-color: rgba(128, 128, 128, 0.119);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    position: relative;
+    text-align: center;
+    top: 5vh;
+  }
+  .navbar-container .navbar a {
+    color: rgba(255, 255, 255, 0.825);
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 3vw;
+    position: relative;
+    top: 3vh;
+  }
+  .navbar-container .navbar a:hover {
+    opacity: 50%;
+  }
+  .navbar-container .navbar a:focus {
+    border-bottom: 2px solid white;
+  }
+  .navbar-container .navbar a span {
+    margin-right: 15px;
+  }
+  .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 15vh;
+  }
+  .main-content .title-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    position: relative;
+    left: 10vw;
+  }
+  .main-content .title-container h3 {
+    color: white;
+    font-size: 2rem;
+    font-family: "Work Sans", sans-serif;
+  }
+  .main-content .title-container h1 {
+    color: white;
+    font-size: 6rem;
+    margin-top: -3vh;
+  }
+  .main-content .title-container p {
+    font-size: 1.1rem;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    margin-top: -5vh;
+    max-width: 30vw;
+  }
+  .main-content .explore-container button {
+    border: none;
+    background: none;
+    min-width: 15vw;
+    min-height: 30vh;
+    border-radius: 50%;
+    font-size: 4vw;
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    background-color: white;
+    position: relative;
+    right: 20vw;
+    margin-top: 10vh;
+  }
+  .main-content .explore-container button:hover {
+    outline: 5vw solid rgba(255, 255, 255, 0.145);
+    cursor: pointer;
+    -webkit-transition: outline ease-out .2s;
+    transition: outline ease-out .2s;
+  }
+}
+/*# sourceMappingURL=home.css.map */
