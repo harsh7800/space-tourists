@@ -1,7 +1,2 @@
-<<<<<<< HEAD
- *.css.map
+ *git .css.map
  mintty.exe.stackdump/
-=======
- #.css.map
- #mintty.exe.stackdump
->>>>>>> a3b3aad34079c2685e45cdbac2c3068edd0f3b3a
