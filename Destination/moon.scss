@@ -438,7 +438,9 @@ $color: white;
                   text-align: center;
                   top: 5vh;
                   padding-top: 3vh;
-
+                  .active{
+                        border-bottom: 2px solid white;
+                  }
                   a {
                         color: rgba(255, 255, 255, 0.825);
                         width: auto;
@@ -503,6 +505,9 @@ $color: white;
                   left: 50vw;
                   width: 30vw;
                   .planet-navbtn {
+                        .active{
+                        border-bottom: 2px solid white;
+                  }
                          a{
                              text-decoration: none;
                              width: auto;

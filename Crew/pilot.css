@@ -371,6 +371,9 @@
     top: 5vh;
     text-align: center;
   }
+  .navbar-container .navbar .active {
+    border-bottom: 2px solid white;
+  }
   .navbar-container .navbar a {
     color: rgba(255, 255, 255, 0.825);
     width: auto;

@@ -454,6 +454,9 @@
     top: 5vh;
     padding-top: 3vh;
   }
+  .navbar-container .navbar .active {
+    border-bottom: 2px solid white;
+  }
   .navbar-container .navbar a {
     color: rgba(255, 255, 255, 0.825);
     width: auto;
@@ -524,14 +527,14 @@
     left: 50vw;
     width: 30vw;
   }
+  .main-content .info .planet-navbtn .active {
+    border-bottom: 2px solid white;
+  }
   .main-content .info .planet-navbtn a {
     text-decoration: none;
     color: white;
     margin-right: 3vw;
     text-align: center;
-  }
-  .main-content .info .planet-navbtn a .active {
-    border-bottom: 2px solid white;
   }
   .main-content .info .planet-navbtn a:hover {
     opacity: 50%;
